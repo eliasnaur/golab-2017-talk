@@ -1,0 +1,38 @@
+//START 1 OMIT
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2+'
+	}
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:25.1.0+'
+	compile 'com.android.support:design:25.1.0+'
+}
+// END 1 OMIT
+// START 2 OMIT
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        applicationId "org.golang.example.basic1"
+		minSdkVersion 16
+		targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+	dataBinding {
+		enabled = true
+	}
+}
+// END 2 OMIT

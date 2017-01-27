@@ -1,0 +1,26 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<data>
+		<variable name="amount" type="java.lang.String"/>
+		<variable name="time" type="java.lang.String"/>
+	</data>
+	<LinearLayout
+		android:id="@+id/item"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="8dp"
+		android:paddingTop="8dp"
+		android:orientation="vertical"
+		android:background="?attr/selectableItemBackground">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="?android:textColorPrimary"
+			android:textStyle="bold"
+			android:text="@{amount}"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@{time}"/>
+	</LinearLayout>
+</layout>

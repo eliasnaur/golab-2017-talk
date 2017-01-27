@@ -1,0 +1,49 @@
+// START 1 OMIT
+buildscript {
+	repositories {
+		jcenter()
+		maven { // HL
+			url "https://plugins.gradle.org/m2/" // HL
+		} // HL
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.2+'
+		classpath "gradle.plugin.org.golang.mobile.bind:gobindPlugin:0.2.8" // HL
+	}
+}
+// END 1 OMIT
+
+apply plugin: 'com.android.application'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:25.1.0+'
+	compile 'com.android.support:design:25.1.0+'
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        applicationId "org.golang.example.account"
+		minSdkVersion 16
+		targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+	dataBinding {
+		enabled = true
+	}
+}
+
+// START 2 OMIT
+apply plugin: "org.golang.mobile.bind"
+
+gobind {
+	pkg = "goaccount"
+}
+// END 2 OMIT

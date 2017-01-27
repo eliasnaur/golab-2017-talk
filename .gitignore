@@ -1,0 +1,4 @@
+*.swp
+build
+.gradle
+jniLibs

@@ -1,0 +1,30 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<data>
+		<variable name="amount" type="java.lang.String"/>
+	</data>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:orientation="vertical">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+			android:layout_marginBottom="16dp"
+			android:textColor="?android:attr/textColorPrimary"
+			android:layout_gravity="center_horizontal"
+			android:text="@{amount}"/>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#737373"
+			android:layout_marginBottom="16dp"/>
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/transactions"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:scrollbars="vertical"/>
+	</LinearLayout>
+</layout>
